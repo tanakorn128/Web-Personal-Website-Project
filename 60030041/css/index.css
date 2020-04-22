@@ -1,0 +1,116 @@
+body{
+    background-image: url("/images/bokeh_car_lights_bg.jpg");
+}
+.head li{
+    list-style: none;
+}
+.head li a{
+    text-decoration: none;
+}
+.list{
+    padding: 0px 10px;
+    
+}
+.Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px;
+    padding: 50px;
+    opacity: 0.9;
+   
+}
+
+section{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.menu ul{
+    list-style: none;
+    background-color: rgb(0, 0, 0);
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    opacity: 0.8;
+}
+
+.menu li{
+    font-size: 1.1em;
+    line-height: 40px;
+    text-transform: uppercase;
+   
+}
+
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding-left: 1px;
+    border-bottom: 1px solidrgb(206, 201, 201);
+    transition: .3s;
+}
+.menu a:hover{
+    background-color: #a5adad;
+}
+.Container section:hover{
+    background-color: #a5adad;
+    transition: .2s;
+}
+@media screen and (min-width: 650px){
+   
+}
+footer{ 
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  font-size: 1.2em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.one img{
+    width: 150px;
+    height: 150px;
+}
+.one a{
+    text-decoration: none;
+}
+.two img{
+    width: 150px;
+    height: 150px;
+}
+.two a{
+    text-decoration: none;
+}
+.three img{
+    width: 150px;
+    height: 150px;
+}
+.three a{
+    text-decoration: none;
+}
+.four img{ /*ปรับขนาดรูปภาพ*/
+    width: 150px;
+    height: 150px;
+}
+.four a{
+    text-decoration: none;
+}
+.Container a{   /*เปลี่ยนสีปุ่มดาวโหลด*/
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 5px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.Container a:hover{ /*เปลี่ยนสีปุ่มดาวโหลดเมื่อเม้าชึ้*/
+    background-color: #fff;
+    color: black;
+}
