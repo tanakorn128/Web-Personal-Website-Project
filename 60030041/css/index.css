@@ -1,5 +1,7 @@
 body{
-    background-image: url("/images/bokeh_car_lights_bg.jpg");
+    background-image: url("../images/bokeh_car_lights_bg.jpg");
+    margin: 0;
+    padding: 0;
 }
 .head li{
     list-style: none;
@@ -16,8 +18,6 @@ body{
     grid-template-columns: 1fr 1fr; 
     grid-gap: 10px;
     padding: 50px;
-    opacity: 0.9;
-   
 }
 
 section{
@@ -28,13 +28,12 @@ section{
   text-align: center;
 }
 .menu ul{
-    list-style: none;
+   
     background-color: rgb(0, 0, 0);
-    text-align: right;
     padding: 0;
     margin: 0;
     display: flex;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .menu li{
@@ -47,29 +46,33 @@ section{
 .menu a{
     text-decoration: none;
     color: #fff;
-    display: block;
-    padding-left: 1px;
-    border-bottom: 1px solidrgb(206, 201, 201);
+    padding-left: 20px;
     transition: .3s;
 }
 .menu a:hover{
-    background-color: #a5adad;
+    background-color: #fff;
+    color: black;
 }
 .Container section:hover{
     background-color: #a5adad;
     transition: .2s;
 }
-@media screen and (min-width: 650px){
-   
+@media screen and (max-width: 750px){
+    .Container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
 }
 footer{ 
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 60%;
-  font-size: 1.2em;
-  color: #fff;
-  text-transform: uppercase;
+    font-size: 1em;
+    line-height: 50px;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    opacity: 0.6;
 }
 .one img{
     width: 150px;
