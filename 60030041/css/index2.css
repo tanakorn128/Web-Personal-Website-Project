@@ -1,0 +1,61 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:  #a5adad;
+}
+
+.wraper{
+    background: rebeccapurple;
+    width: 100%;
+    height: 50px;
+}
+h1 {
+    color: white;
+    font-size: 28px;
+    padding: 0 0 0 0;
+    margin: 10px 0 0 0;
+    float: left;
+   
+}
+ul.menu{
+display: flex;   /* li เรียงต่อกัน*/
+float: right;
+list-style-type: none;
+}
+ul.menu li{
+margin: 0 0 0 20px;
+}
+ul.menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    
+}
+ul.menu li a:hover{
+    color: rgba(252, 227, 0, 0.822);
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+.content > section{
+    border: 2px solid #FFF;
+    margin-top: 60px;
+    padding: 100px;
+}
+footer{
+    border: 7px solid rebeccapurple;
+    width: 100%;
+    margin-top: 5%;
+    font-size: 24px;
+    color: #FFF;
+background-color: rebeccapurple;
+text-align: center;
+}
+section{
+    background: aquamarine;
+}
+.one{
+grid-row: 1/2;
+}

@@ -1,119 +1,84 @@
 body{
-    background-image: url("../images/bokeh_car_lights_bg.jpg");
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
-.head li{
-    list-style: none;
+.menu li{
+    list-style-type: none;
 }
-.head li a{
-    text-decoration: none;
+#material{ /*การเรียงเนื้อหา colum*/
+    display: flex;
+    flex-direction: column;
+    background-color: dodgerblue;
 }
-.list{
-    padding: 0px 10px;
+li, a, button{
+    font-weight: 500;
+    font-size: 20px;
+    color:rgb(255, 255, 255); /*ข้อความในปุ่ม*/
+    text-decoration: none; 
     
 }
-.Container{
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-gap: 10px;
-    padding: 50px;
+header{
+    display: flex; /*เรื่องปุ่มนำทางแนว row*/
+    flex-direction: row;
+    justify-content: space-between; 
+    padding: 10px 10%;
+}
+.nav_link li{
+    list-style: none;
+    display: inline-block; 
+    padding: 0px 20px;
 }
 
-section{
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+nav_link li a{
+    transition: all 0.3s ease 0s;
+    
 }
-.menu ul{
-   
-    background-color: rgb(0, 0, 0);
-    padding: 0;
-    margin: 0;
-    display: flex;
-    opacity: 0.6;
+li a:hover{
+    color: blue;
 }
-
-.menu li{
-    font-size: 1.1em;
-    line-height: 40px;
-    text-transform: uppercase;
-   
-}
-
-.menu a{
-    text-decoration: none;
-    color: #fff;
-    padding-left: 20px;
-    transition: .3s;
-}
-.menu a:hover{
-    background-color: #fff;
-    color: black;
-}
-.Container section:hover{
-    background-color: #a5adad;
-    transition: .2s;
-}
-@media screen and (max-width: 750px){
-    .Container{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-}
-footer{ 
-    font-size: 1em;
-    line-height: 50px;
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    text-align: center;
-    opacity: 0.6;
-}
-.one img{
-    width: 150px;
-    height: 150px;
-}
-.one a{
-    text-decoration: none;
-}
-.two img{
-    width: 150px;
-    height: 150px;
-}
-.two a{
-    text-decoration: none;
-}
-.three img{
-    width: 150px;
-    height: 150px;
-}
-.three a{
-    text-decoration: none;
-}
-.four img{ /*ปรับขนาดรูปภาพ*/
-    width: 150px;
-    height: 150px;
-}
-.four a{
-    text-decoration: none;
-}
-.Container a{   /*เปลี่ยนสีปุ่มดาวโหลด*/
-    background-color: #4CAF50; 
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 5);
     border: none;
-    color: white;
-    padding: 5px 22px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
+    border-radius: 50px;
+    cursor: pointer; /* เปลี่ยนตัวชี้เป็น pointer*/
+    transition: all 0.3s ease 0s;
 }
-.Container a:hover{ /*เปลี่ยนสีปุ่มดาวโหลดเมื่อเม้าชึ้*/
-    background-color: #fff;
+
+.one{
+    opacity:0.9; 
+    filter: contrast(80%);
+
+}
+.two{
+    position:absolute; 
+    color: white;
+    top: 500px;
+    left: 300px;
+    
+}
+.two p{
+    
+    text-align: left;
+    font-size: 20px;
+}
+.three{
+    background-color: yellow;
+    filter: contrast(120%);
+}
+.four{
+    position:absolute;
     color: black;
+    top: 130%;
+    left: 40%;
+    font-size: 40px;
+    
+}
+footer{
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
