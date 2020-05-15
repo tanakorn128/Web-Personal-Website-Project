@@ -18,7 +18,10 @@ var  posX = Math.random() * window.innerWidth, //ลูกบอลตำหน�
      areaY = window.innerHeight; //ความกว่างของไหน้าจอ Y
      wallY = window.innerHeight - 400, //ความสูงขีดกั้น
      score = 0;
-     
+     var button = document.createElement(`button`);
+     document.body.appendChild(button);
+     var n = document.createTextNode(`Start`);
+     button.appendChild(n);
      
 function player(){
     `use strict`

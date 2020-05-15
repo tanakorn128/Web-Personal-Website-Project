@@ -67,3 +67,6 @@ header h2{
     background-color: black;
 
 }
+.ligame{
+    text-decoration: underline overline wavy;
+}
