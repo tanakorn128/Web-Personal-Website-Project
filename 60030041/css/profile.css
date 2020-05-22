@@ -50,9 +50,9 @@ button{
     background-color: black;
 
 }
-.grid-container {
+.grid-container { /*สร้าง grid container ของ section*/
     display: grid;
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto auto ; /*ขนาด 2 colum*/
     grid-gap: 10px;
     background-color: #ff66ff;
     padding: 10px;
