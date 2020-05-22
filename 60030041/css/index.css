@@ -10,7 +10,7 @@ body{
 #material{ /*การเรียงเนื้อหา colum*/
     display: flex;
     flex-direction: column;
-    background-color: dodgerblue;
+    background-color: dodgerblue; /*สีของ flex*/
 }
 li, a, button{
     font-weight: 500;
@@ -26,13 +26,13 @@ header{
     padding: 10px 10%;
 }
 .nav_link li{
-    list-style: none;
+    list-style: none; /*ไม่มีรุปแบบขแง li*/
     display: inline-block; 
     padding: 0px 20px;
 }
 
 nav_link li a{
-    transition: all 0.3s ease 0s;
+    /*transition: all 0.3s ease 0s;*/
     
 }
 li a:hover{
@@ -42,9 +42,8 @@ button{
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 5);
     border: none;
-    border-radius: 50px;
+    border-radius: 50px; /*ขอบของ Button*/
     cursor: pointer; /* เปลี่ยนตัวชี้เป็น pointer*/
-    transition: all 0.3s ease 0s;
 }
 
 .one{
@@ -59,15 +58,16 @@ button{
     color: black;
 }
 .two{
-    position:absolute; 
-    color: white;
+    position:absolute; /*section ทับซ่อนกับกกัน*/
+    color: white; /*สัของข้อความ*/
     top: 500px;
     left: 300px;
     
 }
+
 @keyframes fadeInOut{
     0%{
-        opacity: 0;
+        opacity: 0; /*เปลี่ยนความทึบแสง*/
     }
     50%{
         opacity: 1;
@@ -78,6 +78,7 @@ button{
     text-align: left;
     font-size: 20px;
 }
+
 .two a:hover{
 color: black;
 }
@@ -103,5 +104,20 @@ footer{
     text-align: center;
 }
 .home{
-    text-decoration: underline overline wavy;
+    text-decoration: underline;
+}
+/*Responsive*/
+@media screen and (max-width:700px){
+   
+    img{
+        width: 50%;
+        height: 50%;
+    }
+   .two{
+       position: unset;
+   }
+   .three a{
+       position: unset;
+   }
+
 }

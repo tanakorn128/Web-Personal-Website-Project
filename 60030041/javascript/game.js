@@ -6,14 +6,14 @@ canvas.height = window.innerHeight;
 //context canvas 
 var context = canvas.getContext('2d');
 
-var  posX = Math.random() * window.innerWidth, //ลูกบอลตำหน่งสุ่ม dX
-     posY = Math.random() * window.innerWidth, //ลูกบอลตำหน่งสุ่ม Y
+var  posX = Math.random() * window.innerWidth, //ลูบอลตำหน่งสุ่ม dX
+     posY = 200, //ลูกบอลตำหน่ง Y
      playX = Math.random() * window.innerWidth, //ตำแหน่งของผู้เล่นด้าน X ถูกสุ่ม แต่ไม่เกินความหว้างหน้าจอ
      playY = window.innerHeight - 100, //ตำแน่งผู้เล่นด้าน Y กำหนดตายตัว
      speedX = 30, //ความเร็วผู้เล่นX
      speedY = 30, //ความเร็วผู้เล่นY
-     speedXb = 5, //ความเร็วบอลX
-     speedYb = 5,//ความเร็วบอลY
+     speedXb = 4, //ความเร็วบอลX
+     speedYb = 4,//ความเร็วบอลY
      areaX = window.innerWidth; //ความกว่างของไหน้าจอ X
      areaY = window.innerHeight; //ความกว่างของไหน้าจอ Y
      wallY = window.innerHeight - 400, //ความสูงขีดกั้น
@@ -22,16 +22,21 @@ var  posX = Math.random() * window.innerWidth, //ลูกบอลตำหน�
      document.body.appendChild(button);
      var n = document.createTextNode(`Start`);
      button.appendChild(n);
+     var check = false;
      
 function player(){
     `use strict`
-    context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-    context.fillRect(playX, playY, 100, 10);  //create rectangle ball
+    if(check == true){
+        context.clearRect(0, 0, window.innerWidth, window.innerHeight); // clear
+        context.fillRect(playX, playY, 100, 10);  //create rectangle ball
+        context.fillRect(0, wallY + 100, areaX, 10);  //create wall
+        context.fillRect(posX, posY, 30, 30); // วาดบอลสีเหลี่ยม
+       
+    }
     context.fillRect(0, wallY + 100, areaX, 10);  //create wall
-    context.fillRect(posX, posY, 30, 30);
-   
-    window.requestAnimationFrame(player); //requrst ตลอดเวลา
-    speedball();
+ window.requestAnimationFrame(player); //requrst ตลอดเวลา
+        speedball();
+    
 }
 player();
 
@@ -47,23 +52,35 @@ function area(){ //กำหนดขอบเขต ผู้เล่น
 }
 function speedball(){
     `use strict`
-    var showscore = `Score = ` + score;
-    if(posX > window.innerWidth - 30|| posX < 0 || posX == playX){
-        speedXb = -speedXb;
+    if(check == true){
+        var showscore = `Score = ` + score;
+        if(posX > window.innerWidth - 30|| posX < 0 || posX == playX){
+            speedXb = -speedXb;
+        }
+        if(posY < 0){
+            speedYb = -speedYb; //หลุดข้่างล่างเด่งกลับ
+         
+        }
+        if(posY > window.innerHeight - 30 && check == true){
+            alert(`จบเกม Score = ` + score);
+            score = 0;
+            context.clearRect(0, 0, window.innerWidth, window.innerHeight); // clear
+            posX=100; //set ตำแหน่ง ball
+            posY = 0; //set ตำแหน่ง ball
+            check = false;
+        }
+        if(posY > playY && posY < playY + 3 && posX > playX && posX < playX + 100){//เช็กว่าบอลชนกับผู้เล่นหรือไม่
+            
+            speedYb = -speedYb;
+            score = score + 1;
+        }
+        posY = posY + speedYb;
+        posX = posX + speedXb;
+        
+        context.fillText(showscore , 10, 50)
+        context.font = 30 + "px arial"; //fontของ score 
     }
-    if(posY > window.innerHeight - 30|| posY < 0){
-        speedYb = -speedYb;
-    }
-    if(posY > playY && posY < playY + 3 && posX > playX && posX < playX + 100){//เช็กว่าบอลชนกับผู้เล่นหรือไม่
-        console.log(`true`);
-        speedYb = -speedYb;
-        score = score + 1;
-    }
-    posY = posY + speedYb;
-    posX = posX + speedXb;
-    
-    context.fillText(showscore , 10, 50)
-    context.font = 30 + "px arial"; //fontของ score 
+   
     
 }
 function moveLeft(){ //moveLeft
@@ -103,6 +120,10 @@ if(key.keyCode == 38){ //moueUp
    // moveUp();
 }
 }
-
+function clickstart(){
+check = true;
+context.fillRect(posX, posY, 30, 30); // วาดบอลสีเหลี่ยม
+}
 window.addEventListener(`keydown`,keyDownHandler); 
+window.addEventListener(`click`,clickstart) //คลิดเพื่อเริ่ม
 

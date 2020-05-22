@@ -1,0 +1,111 @@
+body{
+    background-image: url('/images/BG.png');
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.menu li{
+    list-style-type: none;
+}
+#material{
+    display: flex;
+    flex-direction: column;
+    background-color: dodgerblue;
+}
+li, a, button{
+    font-weight: 500;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 10%;
+}
+.nav_link li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+nav_link li a{
+    transition: all 0.3s ease 0s;
+    
+}
+li a:hover{
+    color: blue;
+}
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 5);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin: 0 auto;
+    display: block;
+
+}
+header h2{
+    color: white;
+}
+.x{
+    background-color: black;
+
+}
+.about{
+    text-decoration: underline;
+}
+li{
+    list-style: none;
+    padding: 10px;
+    color: black;
+}
+section{
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}
+section a{
+    padding: 10px;
+    color: black;
+}
+section li{
+    text-decoration: underline;
+    text-decoration-color: blue;
+   
+}
+a:hover{
+    color: blue;
+}
+#contener{
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-gap: 10px;
+    background-color: #ff66ff;
+    padding: 10px;
+  
+}
+@media screen and (max-width:800px){
+    #contener{
+        grid-template-columns: auto;
+    }
+    .f{
+        position: initial
+    }
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    height: 20px; /* ความสูงของ footer */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+}
