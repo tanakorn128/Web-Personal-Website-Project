@@ -1,5 +1,5 @@
 .lichan{
-    text-decoration: underline; /*ขีดเส้นใต้*/
+    text-decoration: underline; /**/
 }
 body{
     box-sizing: border-box;
@@ -107,7 +107,6 @@ footer{
     text-align: center;
     margin: 10px;
 }
-/**/
 @media screen and (max-width:800px){
 img{
     width: 90%;

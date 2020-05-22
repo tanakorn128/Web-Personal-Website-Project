@@ -98,6 +98,7 @@ color: black;
     
 }
 footer{
+    display: a;
     margin: 10px;
     color: white;
     font-size: 20px;
@@ -106,18 +107,24 @@ footer{
 .home{
     text-decoration: underline;
 }
+section li{
+    list-style: none;
+    padding: 10px;
+    background-color: red;
+}
 /*Responsive*/
 @media screen and (max-width:700px){
-   
-    img{
-        width: 50%;
-        height: 50%;
-    }
+   .one img{
+    height: 500px;
+   }
+
    .two{
        position: unset;
    }
    .three a{
        position: unset;
    }
-
+   .four{
+    visibility: hidden;
+   }
 }
